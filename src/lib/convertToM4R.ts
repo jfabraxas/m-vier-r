@@ -19,7 +19,7 @@ function convertToM4R(inputFilePath: string, outputFilePath: string): Promise<vo
                 console.log('Conversion finished!');
                 resolve();
             })
-            .on('error', (err) => {
+            .on('error', (err:string) => {
                 console.error('Error: ', err);
                 reject(err);    
             })
